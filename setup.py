@@ -1,6 +1,8 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 setup(name='gymrecord',
       version='0.9',
-      scripts=['gymrecord'],
-      py_modules = ['play']
+      py_modules = ['play'],
+      scripts = ['gymrecord'],
+      packages=find_packages(),
+      install_requires = ['gym[atari]', 'pygame>=1,<2', 'matplotlib>=3,<4']
 )
